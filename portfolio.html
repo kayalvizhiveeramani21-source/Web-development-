@@ -1,111 +1,258 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professional Portfolio</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+    scroll-behavior:smooth;
 }
 
-body {
-    background: #f4f6f9;
+body{
+    background:#0f172a;
+    color:#fff;
 }
 
 /* Navbar */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 80px;
-    background: #0f172a;
-    color: white;
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#111827;
+    position:sticky;
+    top:0;
 }
 
-.logo {
-    font-size: 22px;
+nav h2{
+    color:#38bdf8;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
 }
 
-nav ul li {
-    margin-left: 25px;
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    transition: 0.3s;
-}
-
-nav ul li a:hover {
-    color: #38bdf8;
+nav ul li a:hover{
+    color:#38bdf8;
 }
 
 /* Hero Section */
-.hero {
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: linear-gradient(to right, #0f172a, #1e293b);
-    color: white;
-    padding: 20px;
+.hero{
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(to right,#0f172a,#1e293b);
 }
 
-.content h1 {
-    font-size: 45px;
-    margin-bottom: 15px;
+.hero h1{
+    font-size:50px;
 }
 
-.content h2 {
-    color: #38bdf8;
-    margin-bottom: 15px;
+.hero span{
+    color:#38bdf8;
 }
 
-.content p {
-    max-width: 600px;
-    margin: auto;
-    margin-bottom: 20px;
-    line-height: 1.6;
+.hero p{
+    margin:20px 0;
+    max-width:600px;
 }
 
-button {
-    padding: 12px 30px;
-    border: none;
-    background: #38bdf8;
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: 0.3s;
+.btn{
+    padding:10px 25px;
+    background:#38bdf8;
+    border:none;
+    color:#000;
+    font-weight:600;
+    border-radius:25px;
+    cursor:pointer;
+    transition:0.3s;
+    text-decoration:none;
 }
 
-button:hover {
-    background: #0ea5e9;
-    transform: scale(1.05);
+.btn:hover{
+    background:white;
+}
+
+/* Sections */
+section{
+    padding:80px 8%;
+    text-align:center;
+}
+
+.section-title{
+    font-size:32px;
+    margin-bottom:40px;
+    color:#38bdf8;
+}
+
+/* About */
+.about p{
+    max-width:700px;
+    margin:auto;
+}
+
+/* Skills */
+.skills-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.skill{
+    background:#1e293b;
+    padding:15px 30px;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.skill:hover{
+    background:#38bdf8;
+    color:black;
+}
+
+/* Projects */
+.projects-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:25px;
+    justify-content:center;
+}
+
+.project-card{
+    background:#1e293b;
+    padding:20px;
+    width:280px;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+    background:#38bdf8;
+    color:black;
+}
+
+/* Contact */
+.contact p{
+    margin:10px 0;
 }
 
 /* Footer */
-footer {
-    background: #0f172a;
-    color: white;
-    text-align: center;
-    padding: 15px;
+footer{
+    text-align:center;
+    padding:20px;
+    background:#111827;
+    margin-top:40px;
 }
 
 /* Responsive */
-@media(max-width:768px) {
-    nav {
-        flex-direction: column;
+@media(max-width:768px){
+    .hero h1{
+        font-size:35px;
     }
-
-    nav ul {
-        margin-top: 10px;
-    }
-
-    .content h1 {
-        font-size: 30px;
+    nav{
+        flex-direction:column;
+        gap:10px;
     }
 }
+
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+    <h2>MyPortfolio</h2>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <h1>Hello, I'm <span>Your Name</span></h1>
+    <p>Web Developer passionate about building modern and responsive web applications using HTML, CSS and Python.</p>
+    <a href="#contact" class="btn">Hire Me</a>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+    <h2 class="section-title">About Me</h2>
+    <p>
+        I am a motivated and enthusiastic developer currently learning full-stack development.
+        I enjoy solving problems and creating user-friendly digital experiences.
+    </p>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+    <h2 class="section-title">My Skills</h2>
+    <div class="skills-container">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Python</div>
+        <div class="skill">Java</div>
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-container">
+        <div class="project-card">
+            <h3>Weather App</h3>
+            <p>Real-time weather app using API integration.</p>
+        </div>
+        <div class="project-card">
+            <h3>Password Generator</h3>
+            <p>Secure password generator with GUI using Python.</p>
+        </div>
+        <div class="project-card">
+            <h3>BMI Calculator</h3>
+            <p>Interactive BMI calculator with graphical interface.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <p>Email: yourname@email.com</p>
+    <p>Phone: 1234567890</p>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Your Name | All Rights Reserved</p>
+</footer>
+
+</body>
+    </html>
